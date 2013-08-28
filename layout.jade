@@ -10,22 +10,30 @@ body
 			li
 				a(href='http://github.com/guyht/glog') Glog
 			li
-				a(href='http://twitter.com/guyht') @guyht
+				a(href='http://twitter.com/bytesnake') @bytesnake
 	div.blog_title
 		<a href='!{base_url}/'>!{title}</a>
 	- each article in articles
 		div.article
-			div.header
-				div.title
+			div.title
+				div.tr1
+				div.tr2
+				div.sq1
+				div.sq2
+			
+				div.link
 					<a href='!{base_url}/!{article.url}/'>!{article.title}</a>
-				div.date
-					-if (show_author)
-						!{article.author} - 
-					!{article.date_str}
+			div.metadata
+				div#desc
+					span Author: <br>
+					span Date:
+				div#cont
+					b !{article.author} <br> 
+					b !{article.date_str}
 			div.body !{article.body}
 
 			- if (typeof single !== 'undefined' && single && disqus_id !== -1)
-				script(type='text/javascript)
+				script(type='text/javascript')
 					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 					var disqus_shortname = '!{disqus_id}'; // required: replace example with your forum shortname
 
