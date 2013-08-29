@@ -21,7 +21,11 @@ body
 		div.blog_title
 			<a href='!{base_url}/'>!{title}</a>
 		
-		div.motto unix philosopher | Node.js | OpenGL
+		div.motto 
+			a(href="http://www.faqs.org/docs/artu/philosophychapter.html") unix philosopher
+			span  | 
+			a(href="http://nodejs.org") Node.js
+			span  | OpenGL
 
 	- each article in articles
 		div.article
