@@ -7,10 +7,21 @@ head
 body
 	div.topbar
 	div.header
+		div.speech_bubble
+
+		div.icons
+			a(href="http://www.twitter.com/bytesnake")
+				img.twitter(src="/images/twitter.png")
+			a(href="https://www.facebook.com/lorenz.schmidt95")
+				img.facebook(src="/images/facebook.png")
+			a(href="http://github.com/bytesnake")
+				img.github(src="/images/github.png")
 		div.avatar
-			
+	
 		div.blog_title
 			<a href='!{base_url}/'>!{title}</a>
+		
+		div.motto unix philosopher | Node.js | OpenGL
 
 	- each article in articles
 		div.article

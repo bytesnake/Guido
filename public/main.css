@@ -1,14 +1,13 @@
 @font-face {
-    font-family: 'electrolize';
-    font-style: normal;
-    font-weight: 400;
-    src: local('electrolize'), url(electrolize.ttf) format('truetype');
+	font-family: 'electrolize';
+	font-style: normal;
+	font-weight: 400;
+	src: local('electrolize'), url(electrolize.ttf) format('truetype');
 }
 
 body {
 	font-family: 'PT Sans', 'Georgia', serif;
 	font-size: 16px;
-	//text-shadow: #C9C9C9 2px 2px 10px;
 	background-color: #262626;
 }
 
@@ -62,9 +61,18 @@ a:hover {
 	color: white;
 	text-decoration: none;
 	font-family: 'electrolize';
-	font-size: 32px;
+	font-size: 37px;
 }
 
+.motto {
+	color: #4D4D4D;
+	font-family: 'electrolize';
+	font-size: 19px;
+	text-align: center;
+
+	position:relative;
+	top: 50px;
+}
 
 .article {
 	margin-left: auto;
@@ -120,6 +128,74 @@ a:hover {
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 20px solid #00600a;
+}
+
+
+.speech_bubble {
+	position: absolute;
+	width:190px;
+	height:40px;
+	margin:0px 200px 200px;
+	text-align:center;
+	background:#00600a;
+}
+
+.speech_bubble:before {
+	content:"";
+	position:absolute;
+	bottom:-70px;
+	left:-80px;
+	border-width:0 0 70px 140px;
+	border-style:solid;
+	border-color:transparent #00600a;
+}
+
+/* creates the larger triangle */
+.speech_bubble:after {
+	content:"";
+	position:absolute;
+	top:40px;
+	left:-80px; 
+	border-width:0 0 86px 81px;
+	border-style:solid;
+	border-color:transparent #262626;
+}
+
+.icons {
+	position: absolute;
+	top: 0;
+	left: 220px;
+}
+
+.twitter {
+	position: relative;
+	top: -5px;
+	left: -5px;
+
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+.facebook {
+	position: relative;
+	top: -12px;
+	left: 10px;
+
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+.github {
+	position: relative;
+	top: -5px;
+	left: 30px;
+	width: 35px;
+
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
 }
 
 .title .link {
