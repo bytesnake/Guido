@@ -1,8 +1,7 @@
 {
 	"title" : "Example article",
 	"date" : "10/10/2011",
-	"author" : "Glog",
-  "show_on_home_page" : false
+	"author" : "bytesnake"
 }
 
 An example of a Glog article. This article will not show on the main

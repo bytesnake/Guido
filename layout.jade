@@ -6,13 +6,12 @@ head
 	link(rel='alternate', type='application/rss+xml', title=title, href=base_url + '/rss.xml')
 body
 	div.topbar
-		ul
-			li
-				a(href='http://github.com/guyht/glog') Glog
-			li
-				a(href='http://twitter.com/bytesnake') @bytesnake
-	div.blog_title
-		<a href='!{base_url}/'>!{title}</a>
+	div.header
+		div.avatar
+			
+		div.blog_title
+			<a href='!{base_url}/'>!{title}</a>
+
 	- each article in articles
 		div.article
 			div.title
@@ -28,8 +27,8 @@ body
 					span Author: <br>
 					span Date:
 				div#cont
-					b !{article.author} <br> 
-					b !{article.date_str}
+					span !{article.author} <br> 
+					span !{article.date_str}
 			div.body !{article.body}
 
 			- if (typeof single !== 'undefined' && single && disqus_id !== -1)

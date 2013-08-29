@@ -1,35 +1,15 @@
+@font-face {
+    font-family: 'electrolize';
+    font-style: normal;
+    font-weight: 400;
+    src: local('electrolize'), url(electrolize.ttf) format('truetype');
+}
+
 body {
 	font-family: 'PT Sans', 'Georgia', serif;
 	font-size: 16px;
 	//text-shadow: #C9C9C9 2px 2px 10px;
-	background-color: #31363C;
-}
-
-.blog_title {
-	margin-right: auto;
-	margin-left: auto;
-	width: 600px;
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-.blog_title, .blog_title a {
-	color: black;
-	text-decoration: none;
-	font-size: 32px;
-}
-
-.topbar li {
-	margin-right: 50px;
-	display: inline;
-	float: left;
-}
-
-.topbar {
-	height: 70px;
-	margin-right: auto;
-	margin-left: auto;
-	width: 900px;
+	background-color: #262626;
 }
 
 a {
@@ -37,8 +17,54 @@ a {
 }
 
 a:hover {
-	font-weight: bold;
+	text-decoration: underline;
 }
+
+.topbar {
+	background-color: #00600a;
+	width: 100%;
+	height: 10px;
+
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+
+.header {
+	position: relative;
+
+	height: 220px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1100px;
+}
+
+.avatar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 256px;
+	height: 256px;
+	background:url(images/avatar.png) 0 0;
+}
+
+.blog_title {
+	position: relative;
+	top: 100px;
+	text-align: center;
+	margin-bottom: 50px;
+
+	text-shadow: 2px 4px 1px rgba(0,0,0,0.3);
+}
+
+.blog_title a {
+	color: white;
+	text-decoration: none;
+	font-family: 'electrolize';
+	font-size: 32px;
+}
+
 
 .article {
 	margin-left: auto;
@@ -51,13 +77,15 @@ a:hover {
 	height: 40px;
 }
 
+/* or #647912 ...*/
+
 .sq1 {
 	position: absolute;
 	top: 0px;
 	left: 20px;
 	height: 20px;
 	width: 800px;
-	background-color: #647912;
+	background-color: #00600a;
 }
 
 .sq2 {
@@ -66,7 +94,7 @@ a:hover {
 	left: 0px;
 	height: 20px;
 	width: 800px;
-	background-color: #647912;
+	background-color: #00600a;
 }
 
 .tr1 {
@@ -78,7 +106,7 @@ a:hover {
 
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-bottom: 20px solid #647912;
+	border-bottom: 20px solid #00600a;
 
 }
 
@@ -91,19 +119,19 @@ a:hover {
 
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-top: 20px solid #647912;
+	border-top: 20px solid #00600a;
 }
 
 .title .link {
 	position: absolute;
-	top: 10px;
+	top: 9px;
 	left: 35px;
 	width: 100%;
 }
 
 .title a {
-	font-weight: bold;
-	font-size: 17px;
+	font-family: 'electrolize';
+	font-size: 20px;
 
 	color: white;
 }
@@ -113,6 +141,8 @@ a:hover {
 }
 
 .metadata {
+	font-family: 'electrolize';
+
 	background-color: #999999;
 	padding: 10px;
 	width: 780px;
@@ -126,6 +156,10 @@ a:hover {
 	position: absolute;
 	top: 10px;
 	left: 70px;
+}
+
+.metadata #cont span {
+	margin: 20px;
 }
 
 .body {
