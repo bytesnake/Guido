@@ -1,7 +1,0 @@
-{
-	"title" : "Example article",
-	"date" : "10/11/2011",
-	"author" : "bytesnake"
-}
-
-An example of a Glog article.

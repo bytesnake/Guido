@@ -176,6 +176,8 @@ a:hover {
 	top: -5px;
 	left: -5px;
 
+	z-index: 1;
+
 	-webkit-transform: rotate(-20deg);
 	-moz-transform: rotate(-20deg);
 	transform: rotate(-20deg);

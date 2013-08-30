@@ -1,0 +1,22 @@
+{
+	"title": "Neuer Blog",
+	"Author": "bytesnake",
+	"date": "08/30/13"
+}
+
+Hier ist das neue Blogdesign, verwende nun Glog statt Wordpress. Damit kann ich meine Beiträge in Markdown schreiben und mit git publishen, wobei das um einiges schneller und effizienter geht als mit Wordpress. (vlt. poste ich dann ja mal mehr! ;))
+
+Ich kann nun von zuhause aus mit 
+```
+git add .
+git commit -m "Neuer Blogpost: #important"
+git push
+```
+einen neuen Eintrag hochladen, den ich vorher mit VIM erstellt habe.
+
+Glog selber ist in Node.js geschrieben und [hier (github)](https://github.com/guyht/Glog) verfügbar. Mein Content verwalte ich ebenfalls mit Github und ist [hier](https://github.com/bytesnake/guido) erreichbar. 
+
+Mein Themengebiet sollte schon anhand der Überschrift klar sein. Werde hauptsächlich über node.js und opengl bloggen, wenn ich mal gaanz viel Zeit habe auch ein Tutorial über opengl(4) (ohne glVertex :P)
+
+Ansonsten noch einen schönen Tag/Nacht, hoffentlich werden weitere folgen .. (zwei schonmal für den @bitowl)
+
