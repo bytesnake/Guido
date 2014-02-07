@@ -7,7 +7,7 @@
 Hier ist das neue Blogdesign, verwende nun Glog statt Wordpress. Damit kann ich meine Beiträge in Markdown schreiben und mit git publishen, wobei das um einiges schneller und effizienter geht als mit Wordpress. (vlt. poste ich dann ja mal mehr! ;))
 
 Ich kann nun von zuhause aus mit 
-```
+```css
 git add .
 git commit -m "Neuer Blogpost: #important"
 git push

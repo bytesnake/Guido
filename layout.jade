@@ -1,10 +1,15 @@
 !!! 5
 head
-	title #{title}
-	link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans', type='text/css')
+	//title #{title}	link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans', type='text/css')
 	link(rel='stylesheet', href=base_url + '/main.css', type='text/css')
+	link(rel='stylesheet', href=base_url + '/prism.css', type='text/css')
 	link(rel='alternate', type='application/rss+xml', title=title, href=base_url + '/rss.xml')
+	
+	if articles.length == 1
+		link(rel='stylesheet', href=base_url + '/single_article.css', type='text/css')
 body
+	script(src=base_url + "/prism.js")
+
 	div.topbar
 	div.header
 		div.speech_bubble
@@ -16,10 +21,11 @@ body
 				img.facebook(src="/images/facebook.png")
 			a(href="http://github.com/bytesnake", target="_blank")
 				img.github(src="/images/github.png")
-		div.avatar
-	
+		a(href="#me")
+			div.avatar
+
 		div.blog_title
-			<a href='!{base_url}/'>!{title}</a>
+			<a href='!{base_url}/'>germandev.com</a>
 		
 		div.motto 
 			a(href="http://www.faqs.org/docs/artu/philosophychapter.html") unix philosopher
@@ -45,6 +51,9 @@ body
 					span !{article.author} <br> 
 					span !{article.date_str}
 			div.body !{article.body}
+				div.fade
+				div.subarticle
+				div.tr3
 
 			- if (typeof single !== 'undefined' && single && disqus_id !== -1)
 				script(type='text/javascript')
@@ -64,7 +73,6 @@ body
 		div.next_page
 			<a href='!{base_url}/page/#{page_num + 1}'>Next Page</a>
 
-	// Please do not remove
 	div.footer
 		a(href='http://github.com/guyht/glog') Powered by Glog
 

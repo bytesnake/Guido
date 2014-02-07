@@ -46,6 +46,8 @@ a:hover {
 	width: 256px;
 	height: 256px;
 	background:url(images/avatar.png) 0 0;
+
+	z-index: 2;
 }
 
 .blog_title {
@@ -53,15 +55,14 @@ a:hover {
 	top: 100px;
 	text-align: center;
 	margin-bottom: 50px;
-
 	text-shadow: 2px 4px 1px rgba(0,0,0,0.3);
 }
 
 .blog_title a {
 	color: white;
-	text-decoration: none;
 	font-family: 'electrolize';
 	font-size: 37px;
+	text-decoration: none;
 }
 
 .motto {
@@ -78,35 +79,64 @@ a:hover {
 	color: #4D4D4D;
 }
 
+.links {
+	position: absolute;
+	top: 0px;
+	left: 80%;
+
+	background-color: #00600a;
+	text-decoration: none;
+
+	height: 20px;
+	padding: 10px;
+}
+
+.links a {
+	color: white;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
 .article {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 50px;
 	width: 800px;
+
+	max-height: 220px;
+	overflow: hidden;
+
+	position: relative;
 }
+
+.article:visited {
+	overflow: visible;
+}
+
 
 .title {
 	position: relative;
 	height: 40px;
 }
 
-/* or #647912 ...*/
-
 .sq1 {
+	background-color: #00600a;
+	
 	position: absolute;
 	top: 0px;
 	left: 20px;
 	height: 20px;
 	width: 800px;
-	background-color: #00600a;
 }
 
 .sq2 {
+	background-color: #00600a;
+	
 	position: absolute;
 	top: 20px;
 	left: 0px;
 	height: 20px;
 	width: 800px;
-	background-color: #00600a;
 }
 
 .tr1 {
@@ -134,14 +164,24 @@ a:hover {
 	border-top: 20px solid #00600a;
 }
 
-
+.tr3 {
+	position: absolute;
+	bottom: 0;
+	right: 0px;
+	width: 0;
+	height 0;
+	
+	 border-left: 20px solid transparent;
+	border-right: 20px solid #262626;
+	border-top: 20px solid transparent;
+}
 .speech_bubble {
+	background-color:#00600a;
+	
 	position: absolute;
 	width:190px;
 	height:40px;
 	margin:0px 200px 200px;
-	text-align:center;
-	background:#00600a;
 }
 
 .speech_bubble:before {
@@ -149,6 +189,7 @@ a:hover {
 	position:absolute;
 	bottom:-70px;
 	left:-80px;
+
 	border-width:0 0 70px 140px;
 	border-style:solid;
 	border-color:transparent #00600a;
@@ -159,7 +200,8 @@ a:hover {
 	content:"";
 	position:absolute;
 	top:40px;
-	left:-80px; 
+	left:-81px; 
+
 	border-width:0 0 86px 81px;
 	border-style:solid;
 	border-color:transparent #262626;
@@ -176,7 +218,7 @@ a:hover {
 	top: -5px;
 	left: -5px;
 
-	z-index: 1;
+	z-index: 3;
 
 	-webkit-transform: rotate(-20deg);
 	-moz-transform: rotate(-20deg);
@@ -230,10 +272,10 @@ a:hover {
 }
 
 .title a {
+	color: white;
+	
 	font-family: 'electrolize';
 	font-size: 20px;
-
-	color: white;
 }
 
 .title a:hover {
@@ -241,14 +283,12 @@ a:hover {
 }
 
 .metadata {
-	font-family: 'electrolize';
-
 	background-color: #999999;
+	
+	font-family: 'electrolize';
 	padding: 10px;
 	width: 780px;
-}
-
-.metadata {
+	
 	position: relative;
 }
 
@@ -265,9 +305,30 @@ a:hover {
 .body {
 	padding: 10px;
 	background-color: #CCCCCC;
-	width: 780px;
-	
+	width: 720px;	
 	margin-bottom: 50px;
+	
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.article .body .fade {
+	position: absolute;
+	bottom: 20px;
+	right: 5px;
+	left: 5px;
+	background-image: linear-gradient(to top, rgb(204, 204, 204), rgba(204, 204, 204, 0));
+	height: 50px;
+	display: block;
+}
+
+.article .body .subarticle {
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	width: 700px;
+	height: 20px;
+	background-color: #CCC;
 }
 
 .footer {
