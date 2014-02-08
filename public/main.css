@@ -269,6 +269,8 @@ a:hover {
 	top: 9px;
 	left: 35px;
 	width: 100%;
+
+	z-index: 3;
 }
 
 .title a {
@@ -346,4 +348,9 @@ a:hover {
 
 .next_page, .footer {
 	text-align: center;
+}
+
+#disqus_thread {
+	padding: 20px;
+	background-color: #CCC;
 }

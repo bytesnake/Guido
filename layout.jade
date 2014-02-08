@@ -4,8 +4,10 @@ head
 	link(rel='stylesheet', href=base_url + '/main.css', type='text/css')
 	link(rel='stylesheet', href=base_url + '/prism.css', type='text/css')
 	link(rel='alternate', type='application/rss+xml', title=title, href=base_url + '/rss.xml')
+
+	title="bytesnake's homepage"
 	
-	if articles.length == 1
+	- if (typeof single !== 'undefined')
 		link(rel='stylesheet', href=base_url + '/single_article.css', type='text/css')
 body
 	script(src=base_url + "/prism.js")
@@ -21,7 +23,7 @@ body
 				img.facebook(src="/images/facebook.png")
 			a(href="http://github.com/bytesnake", target="_blank")
 				img.github(src="/images/github.png")
-		a(href="#me")
+		a(href='/2014/02/About-me')
 			div.avatar
 
 		div.blog_title
@@ -34,40 +36,53 @@ body
 			span  | OpenGL
 
 	- each article in articles
-		div.article
-			div.title
-				div.tr1
-				div.tr2
-				div.sq1
-				div.sq2
-			
-				div.link
-					<a href='!{base_url}/!{article.url}/'>!{article.title}</a>
-			div.metadata
-				div#desc
-					span Author: <br>
-					span Date:
-				div#cont
-					span !{article.author} <br> 
-					span !{article.date_str}
-			div.body !{article.body}
-				div.fade
-				div.subarticle
-				div.tr3
-
+		if article.show_on_home_page || typeof single !== 'undefined'
+			div.article
+				div.title
+					div.tr1
+					div.tr2
+					div.sq1
+					div.sq2
+				
+					div.link
+						<a href='!{base_url}/!{article.url}/'>!{article.title}</a>
+				div.metadata
+					div#desc
+						span Author: <br>
+						span Date:
+					div#cont
+						span !{article.author} <br> 
+						span !{article.date_str}
+				div.body !{article.body}
+					div.fade
+					div.subarticle
+					div.tr3
+		
 			- if (typeof single !== 'undefined' && single && disqus_id !== -1)
 				script(type='text/javascript')
 					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 					var disqus_shortname = '!{disqus_id}'; // required: replace example with your forum shortname
-
+	
 					/* * * DON'T EDIT BELOW THIS LINE * * */
 					(function() {
 						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 					})();
+	
+				div.article
+					div.title
+						div.tr1
+						div.tr2
+						div.sq1
+						div.sq2
+				
+						div.link 
+							a(href="#comment") Kommentare zu '!{article.title}'
 
-				div#disqus_thread
+					div#disqus_thread
+					div.subarticle
+					div.tr3
 
 	- if ((typeof single === 'undefined' || !single) && page_num !== -1)
 		div.next_page

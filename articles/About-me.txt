@@ -1,0 +1,8 @@
+{
+	"title": "About me",
+	"author": "bytesnake",
+	"date": "02/08/14",
+	"show_on_home_page": false
+}
+
+
