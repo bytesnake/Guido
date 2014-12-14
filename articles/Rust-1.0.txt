@@ -1,0 +1,6 @@
+{
+	"title": "Rust und die erste stabile Version",
+	"author": "bytesnake",
+	"date": "14/12/14",
+	"show_on_home_page": false
+}
